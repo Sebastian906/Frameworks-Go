@@ -1,8 +1,9 @@
 package routes
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
+
+	"github.com/gin-gonic/gin"
 )
 
 type Usuario struct {
@@ -18,7 +19,7 @@ func SetupRoutes(r *gin.Engine) {
 
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "index.html", gin.H{
-			"Title": "Mi aplicación",
+			"Title":   "Mi aplicación",
 			"Heading": "!Hola, mundo!",
 			"Message": "Bienvenido a mi aplicación web con Gin",
 		})
