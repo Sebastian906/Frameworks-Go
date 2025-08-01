@@ -10,7 +10,8 @@
 
     <body>
         <h1>{{.Heading}}</h1>
-        <p>{{.Message}}</p>
+        <p id="message">{{.Message}}</p>
+        <button onclick="javascript: changeMessage();">Cambiar mensaje</button>
         <script src="/static/js/script.js"></script>
     </body>
 </html>
