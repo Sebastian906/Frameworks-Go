@@ -27,5 +27,10 @@ func main() {
 		return c.String(http.StatusOK, "Saludos desde Echo!")
 	})
 
+	e.GET("/saludo/:nombre", func(c echo.Context) error {
+		nombre := c.Param("nombre")
+		return c.String(http.StatusOK, "¡Hola, "+nombre+"!")
+	})
+
 	e.Start(":8080")
 }
